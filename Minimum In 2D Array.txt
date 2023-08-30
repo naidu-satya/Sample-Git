@@ -1,0 +1,27 @@
+package DSA;
+
+import java.util.Arrays;
+
+public class MinIn2DArray {
+    public static void main(String[] args) {
+        int[][] arr = {
+                {12, 45, 22 ,8},
+                {6, 86, 99},
+                {11 , 33, 67, 77, 12},
+                {7, 8}
+        };
+       int ans = maximum(arr);
+        System.out.println(ans);
+    }
+
+    static int maximum(int[][] arr){
+        int min = Integer.MAX_VALUE;
+        for (int row = 0; row < arr.length; row++) {
+            for (int col = 0; col < arr[row].length; col++) {
+                if(arr[row][col] < min)
+                    min = arr[row][col];
+            }
+        }
+        return min;
+    }
+}

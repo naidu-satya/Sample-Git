@@ -1,0 +1,59 @@
+package Second_Java;
+//In given num array, return how many of them contaion the even number of digits
+public class FindEvenDigits {
+    public static void main(String[] args) {
+        int[] arr = { 12, 43, 5677, 2316, 67};
+        System.out.println(findNumbers(arr));
+        //System.out.println(digits2(-7464));
+    }
+
+    static int findNumbers(int[] arr){
+        int count =0;
+        /*
+        for (int i = 0; i < arr.length; i++) {
+            if(even(arr[i]))
+                count++;
+        }
+         */
+        for (int i : arr) {
+            if (even(i))
+                count++;
+        }
+        return count;
+    }
+
+
+    //checking whether the digits count is even or not
+    static boolean even(int num){
+        /*
+        if(digits(num) % 2 == 0)
+            return true;
+        return false;
+         */
+        return digits(num) % 2 == 0;
+    }
+
+    //counting the number of digits in the number
+    static int digits(int num){
+        int count =0;
+        //for negative numbers
+        if(num < 0){
+            num = num * -1;
+        }
+        if(num == 0){
+            return 1;
+        }
+        while(num > 0){
+            count++;
+            num = num/10;
+        }
+        return count;
+    }
+
+    //another way to count the digits in a number
+    static int digits2(int num){
+        if(num < 0)
+            num = num * -1;
+        return (int) (Math.log10(num) + 1);  //number system formula to count the digits in the number
+    }
+}

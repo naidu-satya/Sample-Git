@@ -1,0 +1,20 @@
+package DSA;
+
+public class MinInArray {
+    public static void main(String[] args) {
+        int[] arr = { 12, 45, 34, 78, 4, 9, 11};
+        System.out.println(minimum(arr));
+    }
+
+    static int minimum (int[] arr){
+        if(arr.length == 0)
+            System.out.println("Aray is empty");
+        int minValue = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] < minValue)
+                minValue = arr[i];
+        }
+        return minValue;
+
+    }
+}

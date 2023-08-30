@@ -1,0 +1,51 @@
+package DSA;
+
+public class LinearSearch {
+    public static void main(String[] args) {
+    int[] arr = {12, 34, 56, 22, 78, 9,2 };
+    int target = 56;
+    int ans = linearSearch(arr, target);
+    //int ans = linearSearch2(arr, target);
+    //boolean ans = linearSearch3(arr, target);
+        System.out.println(ans);
+    }
+
+    //search in the array; target found return index
+    //otherwise return -1
+    static  int linearSearch(int[] arr, int target){
+        if(arr.length == 0)
+            return -1;
+        for(int index =0; index < arr.length; index++){
+            //check every element whether it is = to target or not
+            if(arr[index] == target)
+                return index;
+        }
+        //if the element not found, it will return -1
+        return -1;
+    }
+
+
+    //search in the array; target found return target
+    //or return some max value
+    static  int linearSearch2 (int[] arr, int target){
+        if(arr.length == 0)
+            return -1;
+        for (int element : arr) {
+            if (element == target)
+                return element;
+        }
+        return Integer.MAX_VALUE;
+    }
+
+
+    //search in the array; target found return true or return false
+    static boolean linearSearch3(int[] arr, int target){
+        if(arr.length == 0)
+            return false;
+        for(int index =0; index < arr.length; index++){
+            if(arr[index] == target)
+                return true;
+        }
+        return false;
+    }
+}
