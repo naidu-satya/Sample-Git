@@ -1,0 +1,59 @@
+*****************Assingning a variable to an interger value*********************              
+
+		//assigning a variable to an integer value
+/*public class PrintingASCIIValue {
+    public static void main(String args[]) {
+        // character whose ASCII value to be found
+        char ch1 = 'a';
+        char ch2 = 'b';
+        // variable that stores the integer value of the character
+        int asciiValue1 = ch1;
+        int asciiValue2 = ch2;
+        System.out.println("ASCII Value of "+ch1+ "is "+asciiValue1);
+        System.out.println("ASCII Value of "+ch2+ "is "+asciiValue2);
+    }
+}*/
+
+
+
+                    //assigning a variable to an integer value
+/*import java.util.Scanner;
+
+public class PrintingASCIIValue {
+    public static void main(String args[]) {
+        System.out.print("Enter the character:");
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.next().charAt(0);
+        int asciiValue = ch;
+
+        System.out.println("ASCII Value of "+ch+ " is "+asciiValue);
+
+    }
+}*/
+
+
+                    //assigning a variable to an integer value
+/*public class PrintingASCIIValue {
+    public static void main(String args[]) {
+        int ch1 = 'a';
+        int ch2 = 'b';
+        System.out.println("ASCII Value of a is "+ch1);
+        System.out.println("ASCII Value of b is "+ch2);
+    }
+}*/
+
+
+*********************Using Type Casting*************************
+                    //using type  casting
+public class PrintingASCIIValue {
+    public static void main(String args[]) {
+        //characters whose ASCII value to be found
+        char ch1 = 'a';
+        char ch2 = 'b';
+        ////casting or converting a charter into int type
+        int asciiValue1 = (int) ch1;
+        int asciiValue2 = (int) ch2;
+        System.out.println("ASCII Value of "+ch1+ "is "+asciiValue1);
+        System.out.println("ASCII Value of "+ch2+ "is "+asciiValue2);
+    }
+}

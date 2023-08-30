@@ -1,0 +1,74 @@
+***************Amstrong ***************************
+import java.util.Scanner;
+import java.lang.Math;
+
+public class AmstrongNumber {
+    static void checkAmstrong(int n){
+        int temp, length = 0, last =0, sum = 0;
+        temp = n;
+        while(temp>0){
+            temp = temp / 10;
+            length++;
+        }
+        temp = n;
+        while(temp > 0){
+            last = temp % 10;
+            sum = (int) (sum + Math.pow(last,length));
+            temp = temp /10;
+        }
+        if(n == sum)
+            System.out.println("Amstrong");
+        else
+            System.out.println("Not an Amstrong");
+    }
+
+    public static void main(String args[]) {
+        System.out.println("Enter the number");
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        checkAmstrong(number);
+    }
+}
+
+
+
+
+******************Amstrong (using boolean)***************
+
+import java.util.Scanner;
+import java.lang.Math;
+
+public class AmstrongNumber {
+    static boolean checkAmstrong(int n){
+        int temp, length = 0, last =0, sum = 0;
+        temp = n;
+        while(temp>0){
+            temp = temp / 10;
+            length++;
+        }
+        temp = n;
+        while(temp > 0){
+            last = temp % 10;
+            sum = (int) (sum + Math.pow(last,length));
+            temp = temp /10;
+        }
+        if(n == sum)
+            return true;
+        else
+            return false;
+    }
+
+    public static void main(String args[]) {
+        System.out.println("Enter the number");
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        if(checkAmstrong(number)){
+            System.out.println("Given "+number+" is an Amstrong");
+        }
+        else {
+            System.out.println("Given " + number + " is not an Amstrong");
+        }
+    }
+}
+
+

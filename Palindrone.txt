@@ -1,0 +1,20 @@
+***********Palindrome**************
+
+import java.util.Scanner;
+
+public class Palindrome {
+    public static void main(String args[]){
+        String original, reverse = " ";
+        System.out.println("Enter the number or string to check if it is palindrome or not");
+        Scanner scanner = new Scanner(System.in);
+        original = scanner.next();
+        int length = original.length();
+        for(int i = length-1;  i>=0; i--){
+            reverse = reverse + original.charAt(i);
+        }
+        if(original.equals(reverse))
+            System.out.println("Given "+original+" is a palindrome");
+        else
+            System.out.println("Given "+original+" is not a palindrome");
+    }
+}

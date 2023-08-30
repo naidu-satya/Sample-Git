@@ -1,0 +1,72 @@
+********************Without Method OverRiding*********************
+//without  method overriding
+//creating parent class
+/*class MethodOverriding {
+    void run() {
+        System.out.println("Program  is running");
+    }
+}
+//creating a child class
+    class childClass extends MethodOverriding {
+        public static void main(String args[]) {
+            //creating an instance for the child class
+            childClass obj = new childClass();
+            //calling the parent class object using child class object
+            obj.run();
+        }
+    }*/
+
+
+
+
+**************************With Method OverRiding**************************
+//with method overriding
+/*class MethodOverriding {
+    void run(){
+        System.out.println("Vehical is running");
+    }
+}
+class childClass extends MethodOverriding {
+    void run(){
+        System.out.println("Bike is running");
+    }
+    public static void main(String args[]) {
+        childClass obj = new childClass();
+        obj.run();
+    }
+}*/
+
+
+
+**********************Real Time Example of Method OverRiding************************
+public class MethodOverriding {
+    int getRateOfInterest(){
+        return 0;
+    }
+}
+class ICICI extends MethodOverriding{
+    int getRateOfInterest(){
+        return 14;
+    }
+}
+class SBI extends MethodOverriding{
+    int getRateOfInterest(){
+        return 17;
+    }
+}
+class Axis extends MethodOverriding{
+    int getRateOfInterest(){
+        return 13;
+    }
+}
+class childClass{
+    public static void main(String args[]){
+        SBI sbi = new SBI();
+        ICICI icici = new ICICI();
+        Axis axis = new Axis();
+        System.out.println("Rate of interest of ICICI bank is: "+icici.getRateOfInterest());
+        System.out.println("Rate of interest of SBI bank is: "+sbi.getRateOfInterest());
+        System.out.println("Rate of interest of Axis bank is: "+axis.getRateOfInterest());
+
+    }
+}

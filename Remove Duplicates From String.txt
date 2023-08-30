@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class removeDuplicatesFromString {
+    public static void removeDuplicates( char c[] , int n){
+        String str ="";
+        for(int i=0; i <n; i++){
+            int j;
+            for( j=0; j<i; j++){
+                if(c[i]==c[j]) {
+                    break;
+                }
+            }
+            if(j==i)
+                str += c[i];
+        }
+        System.out.println(str);
+    }
+    public static void main(String args[]){
+        System.out.println("Enter the string");
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        char c[] = str.toCharArray();
+        int n = c.length;
+        removeDuplicates(c, n);
+
+    }
+
+}
